@@ -1,0 +1,1 @@
+{"appId": "com.j2b.converter", "appName": "Java to Bedrock", "webDir": "www", "plugins": {"CapacitorHttp": {"enabled": true}}}

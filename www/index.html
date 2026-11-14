@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Java to Bedrock</title><link rel="stylesheet" href="style.css"></head><body>
+<div id="splash"><h1>Java to Bedrock</h1></div><i class="blob b1"></i><i class="blob b2"></i>
+<main id="app">
+<section id="v-convert" class="view on">
+<h1>Java to Bedrock</h1>
+<div class="glass"><button class="btn" id="pick">Choose JAR file</button><input type="file" id="file" accept=".jar,.zip,application/java-archive" hidden>
+<p id="sel" class="muted">No file selected</p></div>
+<div class="glass" id="analysis" hidden><h2>Analysis</h2><div id="report"></div></div>
+<div class="glass"><h2>Settings</h2>
+<label>Output <select id="fmt"><option value="mcaddon">.mcaddon (BP + RP)</option><option value="rp">.mcpack (resource pack)</option><option value="bp">.mcpack (behavior pack)</option></select></label>
+<label>Pack name <input id="pname" placeholder="Auto"></label></div>
+<div class="glass"><h2>Progress</h2><div class="bar"><b id="bar"></b></div><pre id="log"></pre>
+<button class="btn" id="go" disabled>Convert</button><button class="btn alt" id="exp" hidden>Export add-on</button></div>
+<div class="glass"><h2>Target Bedrock version</h2><button class="btn alt" id="vbtn">Select version</button></div>
+</section>
+<section id="v-proj" class="view"><h1>Projects</h1><div id="plist"></div></section>
+<section id="v-hist" class="view"><h1>History</h1><div id="hlist"></div><button class="btn alt" id="clr">Clear error reports</button></section>
+<section id="v-mods" class="view"><h1>Mods</h1>
+<div class="glass"><div class="seg"><a data-s="mr" class="on">Modrinth</a><a data-s="cf">CurseForge</a></div>
+<input id="mq" placeholder="Search mods"><label>Loader <select id="ml"><option value="">Any</option><option>forge</option><option>neoforge</option><option>fabric</option></select></label>
+<input id="cfk" placeholder="CurseForge API key (console.curseforge.com)" hidden></div>
+<div id="mlist"></div><button class="btn alt" id="mmore" hidden>Load more</button></section>
+</main>
+<nav class="glass tabs"><a data-v="convert" class="on">Convert</a><a data-v="proj">Projects</a><a data-v="hist">History</a><a data-v="mods">Mods</a></nav>
+<div id="sheet" hidden><div class="glass sh"><input id="vq" placeholder="Search version, e.g. 1.20"><div id="vl"></div><button class="btn alt" id="vx">Close</button></div></div>
+<script src="jszip.min.js"></script><script src="app.js"></script><script src="mods.js"></script></body></html>
